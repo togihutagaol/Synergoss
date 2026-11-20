@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Synergos.Web</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<script>try{if(sessionStorage.getItem("sw_seen"))document.documentElement.classList.add("seen")}catch(e){}</script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/faq.css">
+<link rel="stylesheet" href="css/mobilenav.css">
+</head>
+<body class="loading">
+<div id="loader" role="status" aria-label="Memuat website"><div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div><canvas id="bolt"></canvas><div class="ld"><small>Welcome To</small><strong>Synergos.Web</strong><div class="ldr"><span>Loading</span><span id="pct">0%</span></div><div class="ldb"><i id="pbar"></i></div></div></div>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<div id="glow" aria-hidden="true"></div>
+<div class="bar-t" aria-hidden="true"></div><div class="bar-b" aria-hidden="true"></div>
+<div id="prog" aria-hidden="true"></div>
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<nav aria-label="Menu utama">
+  <a href="#home">Home</a><a href="#tentang">Tentang</a><a href="#tim">Tim</a><a href="#skill">Skill</a><a href="#layanan">Layanan</a><a href="#proyek">Proyek</a><a href="#kontak">Kontak</a>
+</nav>
+
+<main>
+<section id="home">
+  <div class="beam" aria-hidden="true"><i></i></div>
+  <div class="hero-grid">
+    <div class="hero-txt">
+      <span class="pill ci" style="--dl:.5s"><i></i><span id="badge"></span></span>
+      <h1 class="logo">Synergos.Web</h1>
+      <p class="tag ci" style="--dl:1.3s"><span id="typed"></span></p>
+      <p class="lead ci" style="--dl:1.5s" id="lead"></p>
+      <div class="cta ci" style="--dl:1.7s"><a class="btn p" href="#layanan">Lihat layanan kami</a><a class="btn" href="#kontak">Hubungi kami</a></div>
+    </div>
+    <div class="stage" aria-hidden="true">
+      <div class="tilt"><div class="win ci" style="--dl:1s"><div class="wbar"><i></i><i></i><i></i><span>synergos.js</span></div><pre class="live" id="code"></pre></div></div>
+      <div class="win mini ci" style="--dl:2s"><pre><span class="f">.tim</span> {
+  fokus: <span class="s">"website"</span>;
+  gaya: <span class="s">"futuristik"</span>;
+  mode: <span class="s">"dark"</span>;
+}</pre></div>
+      <div class="fl f1" style="--dl:1.6s;--z:1"><img src="icons/react.svg" alt=""></div>
+      <div class="fl f2" style="--dl:1.8s;--z:-1.4"><img src="icons/html5.svg" alt=""></div>
+      <div class="fl f3" style="--dl:2.2s;--z:1.8"><img src="icons/css3.svg" alt=""></div>
+    </div>
+  </div>
+  <a class="hint" href="#tentang">Scroll untuk menjelajah <span>&darr;</span></a>
+</section>
+
+<section id="tentang">
+  <h2>Tentang tim</h2>
+  <p class="sub">Enam orang dengan keahlian berbeda, satu tujuan yang sama.</p>
+  <div class="about">
+    <div class="story"><div id="story"></div><div class="stats" id="stats"></div></div>
+    <div class="orbit" aria-hidden="true"><div class="ring"></div><div class="ring r2"></div><div class="rot" id="rot"></div><div class="core">S</div></div>
+  </div>
+  <h3 class="sec3">Yang kami pegang</h3>
+  <div class="cards" id="values"></div>
+  <h3 class="sec3">Perjalanan kami</h3>
+  <div class="tl" id="tl"></div>
+</section>
+
+<section id="tim">
+  <h2>Anggota tim</h2>
+  <p class="sub">Kartu bergulir terus ke kanan. Arahkan kursor untuk menghentikannya, geser sendiri, atau klik kartu untuk melihat profil.</p>
+  <div class="rail" id="rail"></div>
+</section>
+
+<section id="skill">
+  <h2>Skill</h2>
+  <p class="sub">Klik kartu untuk membaliknya dan membaca penjelasannya. Pilih bidang di bawah untuk menyaring skill.</p>
+  <div class="tabs" id="sk-tabs"></div>
+  <div class="sk-grid pre" id="skills"></div>
+</section>
+
+<section id="layanan">
+  <h2>Layanan</h2>
+  <p class="sub">Apa yang bisa kami kerjakan untuk bisnis kamu.</p>
+  <div class="cards" id="services"></div>
+  <h3 class="sec3">Cara kerja kami</h3>
+  <div class="cards" id="process"></div>
+  <div class="glass soon">
+    <h3>Proyek pertama sedang dikerjakan</h3>
+    <p>Hasil kerja kami akan tampil di sini begitu selesai.</p>
+    <div class="bar" style="--p:40%"><i></i></div>
+  </div>
+</section>
+
+<section id="proyek">
+  <h2>Proyek</h2>
+  <p class="sub">Hasil kerja kami. Pilih kategori, lalu klik kartu untuk melihat detailnya.</p>
+  <div class="tabs" id="pj-tabs"></div>
+  <div class="pj-grid pre" id="pj-grid"></div>
+  <div class="pj-more"><button class="tab" id="pj-more" hidden></button></div>
+</section>
+
+<section id="kontak">
+  <h2>Kontak</h2>
+  <p class="sub">Punya ide untuk website atau company profile? Ceritakan ke kami.</p>
+  <div class="ct-grid" id="ct-grid">
+    <div class="glass ct-card">
+      <h3 class="ct-h" id="ct-title"></h3><p class="ct-i" id="ct-intro"></p>
+      <form id="ct-form" novalidate>
+        <label class="fld"><span>Nama</span><input name="nama" required autocomplete="name" placeholder="Nama kamu"></label>
+        <label class="fld"><span>Email</span><input name="email" type="email" required autocomplete="email" placeholder="email@kamu.com"></label>
+        <label class="fld"><span>Pesan</span><textarea name="pesan" required placeholder="Ceritakan kebutuhan website kamu..."></textarea></label>
+        <button class="btn p" type="submit">Kirim pesan</button>
+        <p class="st" id="ct-st" role="status"></p>
+      </form>
+      <h4 class="ct-f">Temukan kami</h4>
+      <div id="ct-find"></div>
+    </div>
+    <div class="glass ct-card" id="cm">
+      <div class="cm-h"><span>💬</span>Komentar (<em id="cm-n">0</em>)</div>
+      <div class="cm-note" id="cm-note" hidden></div>
+      <form id="cm-form" novalidate>
+        <label class="fld"><span>Nama</span><input name="nama" maxlength="40" autocomplete="name" placeholder="Masukkan nama kamu"></label>
+        <label class="fld"><span>Komentar</span><textarea name="komentar" maxlength="500" placeholder="Tulis komentar kamu di sini..."></textarea></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn p" type="submit">Kirim komentar</button>
+        <p class="st" id="cm-st" role="status"></p>
+      </form>
+      <div class="cm-list" id="cm-list"></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="ft">
+  <div class="ft-cta"><div><h3 id="ft-ct-t"></h3><p id="ft-ct-p"></p></div><a class="btn p" href="#kontak">Mulai diskusi</a></div>
+  <div class="ft-in">
+    <div class="ft-brand">
+      <a class="ft-logo" href="#home">Synergos.Web</a>
+      <p id="ft-about"></p>
+      <div class="ft-status"><i></i><span id="ft-status"></span></div>
+    </div>
+    <div class="ft-col" role="navigation" aria-label="Menu footer"><h4>Menu</h4><a href="#home">Home</a><a href="#tentang">Tentang</a><a href="#tim">Tim</a><a href="#skill">Skill</a><a href="#layanan">Layanan</a><a href="#proyek">Proyek</a><a href="#kontak">Kontak</a></div>
+    <div class="ft-col"><h4>Kontak</h4><div id="ft-ct"></div></div>
+    <div class="ft-col"><h4>Temukan kami</h4><div class="ft-soc" id="ft-soc"></div></div>
+  </div>
+  <div class="ft-bot"><span>&copy; <span id="yr"></span> Synergos.Web. Semua hak dilindungi.</span><a class="ft-top" href="#home">Kembali ke atas <i>&uarr;</i></a></div>
+</footer>
+<button class="totop" id="totop" aria-label="Kembali ke atas"><svg viewBox="0 0 48 48" aria-hidden="true"><circle class="bg" cx="24" cy="24" r="21"/><circle class="pg" id="totop-pg" cx="24" cy="24" r="21"/></svg><span>&uarr;</span></button>
+
+<div class="pf" id="pf" aria-hidden="true">
+  <div class="pf-bg"></div>
+  <div class="pf-card" role="dialog" aria-modal="true" aria-labelledby="pf-name">
+    <button class="pf-x" aria-label="Tutup">&times;</button>
+    <div class="pf-ph" id="pf-ph"></div>
+    <div class="pf-body">
+      <p class="pf-role" id="pf-role"></p>
+      <h3 id="pf-name"></h3>
+      <p class="pf-bio" id="pf-bio"></p>
+      <blockquote id="pf-q"></blockquote>
+      <div class="pf-sk" id="pf-sk"></div>
+      <div class="pf-ct" id="pf-ct"><h4 id="pf-ch"></h4><p class="pf-ask" id="pf-ask"></p><div class="pf-cb" id="pf-cb"></div><div class="pf-ln" id="pf-ln"></div></div>
+    </div>
+    <div class="pf-nav"><button class="pf-p" aria-label="Anggota sebelumnya">&larr;</button><span id="pf-c"></span><button class="pf-n" aria-label="Anggota berikutnya">&rarr;</button></div>
+  </div>
+</div>
+<div class="pf" id="pj" aria-hidden="true">
+  <div class="pf-bg"></div>
+  <div class="pf-card pj-card" role="dialog" aria-modal="true" aria-labelledby="pj-t">
+    <button class="pf-x" aria-label="Tutup">&times;</button>
+    <div class="pf-ph" id="pj-ph"></div>
+    <div class="pf-body">
+      <p class="pf-role" id="pj-cat"></p>
+      <h3 id="pj-t"></h3>
+      <p class="pf-bio" id="pj-d"></p>
+      <p class="pj-meta" id="pj-meta"></p>
+      <div class="pf-sk" id="pj-sk"></div>
+      <div class="pf-cb" id="pj-cb"></div>
+    </div>
+    <div class="pf-nav"><button class="pf-p" aria-label="Proyek sebelumnya">&larr;</button><span id="pj-c"></span><button class="pf-n" aria-label="Proyek berikutnya">&rarr;</button></div>
+  </div>
+</div>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+<script src="js/faq.js"></script>
+<script src="js/mobilenav.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+/* Bagian FAQ */
+.fq-list{display:flex;flex-direction:column;gap:14px;max-width:820px}
+.fq{border:1px solid var(--line);border-radius:18px;background:var(--glass);backdrop-filter:blur(10px);transition:border-color .3s,box-shadow .3s,background .3s;animation:fqin .7s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*70ms)}
+.fq-list.pre .fq{animation-play-state:paused}
+@keyframes fqin{from{opacity:0;transform:translateY(24px)}}
+.fq:hover{border-color:rgba(34,211,238,.5)}
+.fq.open{border-color:var(--cyan);box-shadow:0 0 34px #22d3ee22;background:linear-gradient(160deg,rgba(20,45,110,.5),rgba(8,18,48,.6))}
+.fq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;background:none;border:0;color:var(--text);font:600 1rem Sora,system-ui,sans-serif;text-align:left;cursor:pointer}
+.fq-q i{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:1.2rem;border:1px solid var(--line);transition:transform .4s cubic-bezier(.3,.7,.2,1),background .3s,border-color .3s}
+.fq.open .fq-q i{transform:rotate(45deg);background:var(--blue);border-color:transparent}
+.fq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.3,.7,.2,1)}
+.fq.open .fq-a{grid-template-rows:1fr}
+.fq-a>div{overflow:hidden;visibility:hidden;transition:visibility .45s}
+.fq.open .fq-a>div{visibility:visible}
+.fq-a p{padding:0 22px 20px;color:var(--muted)}
+.fq-more{max-width:820px;margin-top:28px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:24px 28px;border-radius:20px;border:1px dashed var(--line);background:var(--glass)}
+.fq-more h3{font:800 1.15rem Sora,sans-serif;margin-bottom:2px}
+.fq-more p{color:var(--muted);font-size:.92rem}
